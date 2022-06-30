@@ -1,0 +1,67 @@
+.sect {
+  &-info {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: $white;
+
+    &-cont {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &.right {
+        text-align: right;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .title {
+      display: block;
+      padding-bottom: 15px;
+      font-size: 24px;
+      line-height: 32px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 28px;
+    }
+  }
+
+  &-about {
+    padding: 140px;
+
+    &-cont {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 35px;
+      background: rgba($white, .9);
+
+      .title {
+        display: block;
+        padding-bottom: 15px;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+  
+      p {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 28px;
+      }
+    }
+  }
+}

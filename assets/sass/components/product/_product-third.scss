@@ -1,0 +1,30 @@
+.product-third {
+  margin-bottom: 25px;
+  text-align: center;
+
+  .item {
+    &-img {
+      width: 100%;
+      height: 650px;
+      display: block;
+      border: 3px solid $bg-black;
+      overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    &-title {
+      padding: 5px 10px 10px;
+      display: block;
+      font-size: 34px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $white;
+      background: $bg-black;
+    }
+  }
+}

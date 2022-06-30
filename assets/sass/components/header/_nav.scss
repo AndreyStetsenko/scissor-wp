@@ -1,0 +1,25 @@
+.nav-items {
+  display: flex;
+  flex-direction: row;
+
+  @include media("<md") {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item {
+    margin-right: 10px;
+    color: rgba($white, 0.8);
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

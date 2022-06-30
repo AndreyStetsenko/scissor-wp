@@ -1,0 +1,60 @@
+@import 'cart';
+
+.woocommerce {
+  &-message {
+    border: none;
+    margin-top: 15px;
+    background: #000;
+    color: #fff;
+    line-height: 35px;
+  
+    &:before {
+      top: 16px;
+    }
+  
+    .button {
+      &.wc-forward {
+        background: #fff;
+        border: none;
+        border-radius: 0;
+        color: #000;
+      }
+    }
+  }
+
+  .star-rating {
+    width: 135px;
+    height: 25px;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      height: 25px;
+      position: relative;
+      display: block;
+      float: none;
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNyAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjUgMEwxNi41MzA5IDkuMzI4MjdIMjYuMzM5M0wxOC40MDQyIDE1LjA5MzVMMjEuNDM1MSAyNC40MjE3TDEzLjUgMTguNjU2NUw1LjU2NDkgMjQuNDIxN0w4LjU5NTg0IDE1LjA5MzVMMC42NjA3MzcgOS4zMjgyN0gxMC40NjkxTDEzLjUgMFoiIGZpbGw9IiNGRjAwMDAiLz4KPC9zdmc+Cg==');
+      opacity: .1;
+    }
+
+    span {
+      overflow: hidden;
+      float: left;
+      top: 0;
+      left: 0;
+      position: absolute;
+
+      &:before {
+        content: '';
+        height: 25px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        display: block;
+        float: none;
+        background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNyAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjUgMEwxNi41MzA5IDkuMzI4MjdIMjYuMzM5M0wxOC40MDQyIDE1LjA5MzVMMjEuNDM1MSAyNC40MjE3TDEzLjUgMTguNjU2NUw1LjU2NDkgMjQuNDIxN0w4LjU5NTg0IDE1LjA5MzVMMC42NjA3MzcgOS4zMjgyN0gxMC40NjkxTDEzLjUgMFoiIGZpbGw9IiNGRjAwMDAiLz4KPC9zdmc+Cg==');
+      }
+    }
+  }
+}

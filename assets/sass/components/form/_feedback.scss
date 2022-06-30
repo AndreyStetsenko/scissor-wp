@@ -1,0 +1,22 @@
+.form-feedback {
+  .title {
+    margin-bottom: 28px;
+    display: block;
+    font-size: 23px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .form-control {
+    border: 1px solid $black;
+    border-radius: 0;
+    font-weight: 300;
+
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.nav-socials {
+  margin-left: 25px;
+
+  @include media("<md") {
+    margin-top: 10px;
+    margin-left: 0;
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,11 @@
+.products-forme {
+  padding: 20px 0;
+  background: $bg-black;
+
+  &-title {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+  }
+}

@@ -1,0 +1,13 @@
+.products-assort {
+  padding: 25px 0;
+  background: $white;
+
+  &-title {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .items {
+    margin-top: 30px;
+  }
+}

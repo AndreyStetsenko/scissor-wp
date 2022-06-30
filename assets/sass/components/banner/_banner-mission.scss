@@ -1,0 +1,50 @@
+.banner-mission {
+  padding: 50px 0;
+  background: #C9176A;
+
+  .title {
+    font-size: 68px;
+    line-height: 78px;
+    color: $white;
+    font-weight: 400;
+  }
+
+  .content {
+    margin-top: 16px;
+    font-size: 26px;
+    line-height: 42px;
+    color: $white;
+    font-weight: 400;
+  }
+
+  .logo {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    @include media("<md") {
+      margin-top: 50px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-link {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .btn-black {
+      padding: 5px 25px;
+      font-size: 23px;
+      line-height: 28px;
+      font-weight: 400;
+    }
+  }
+}

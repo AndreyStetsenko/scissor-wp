@@ -1,0 +1,45 @@
+.wrapper {
+  width: 100%;
+  // max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: $white;
+    text-align: center;
+
+    &.black {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      background: $black;
+
+      .article-level-1 {
+        color: $white;
+        font-size: 48px;
+        line-height: 58px;
+
+        @include media("<md") {
+          font-size: 28px;
+          line-height: 38px;
+        }
+      }
+    }
+
+    &.inner {
+      margin-top: 5px;
+      margin-bottom: 50px;
+      text-align: left;
+      
+      .article-level-1 {
+        font-size: 23px;
+        line-height: 28px;
+        font-weight: 400;
+      }
+    }
+  }
+}

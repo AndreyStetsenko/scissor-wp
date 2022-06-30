@@ -1,0 +1,28 @@
+.banner-head {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &-contain {
+    min-height: 60vh;
+    position: relative;
+  }
+
+  &-title {
+    max-width: 50%;
+    position: absolute;
+    bottom: 25px;
+    font-size: 64px;
+    line-height: 78px;
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+
+    @include media("<md") {
+      font-size: 54px;
+      line-height: 68px;
+    }
+  }
+}

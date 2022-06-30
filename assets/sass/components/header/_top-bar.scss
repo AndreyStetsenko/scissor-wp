@@ -1,0 +1,49 @@
+.top-bar {
+  padding: 10px 0;
+  background: $white;
+
+  &--cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &--actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .item-link {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+
+    &-link {
+      color: $black;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    &-icon {
+      margin-right: 7px;
+      color: $black;
+      font-size: 10px;
+    }
+  }
+}

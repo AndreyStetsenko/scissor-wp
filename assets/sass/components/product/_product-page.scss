@@ -1,0 +1,413 @@
+.ppage {
+  &-cont {
+    margin-top: 15px;
+  }
+
+  &-head {
+    margin-top: 15px;
+
+    .item {
+      &-link {
+        display: flex;
+        align-items: center;
+        margin-right: 3px;
+        font-size: 12px;
+        font-weight: 700;
+        color: $black;
+      }
+    }
+
+    &-pagination {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+
+      .nav {
+        &-links {
+          display: flex;
+          flex-direction: row;
+
+          & > div {
+            margin-right: 5px;
+            display: flex;
+
+            &:before {
+              content: '|';
+              margin-right: 5px;
+            }
+
+            &:first-child {
+              &:before {
+                content: '';
+              }
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      .item {
+        &-link {    
+          &:last-child {
+            margin-right: 0;
+    
+            &:after {
+              display: none;
+            }
+          }
+    
+          &:after {
+            content: '|';
+            display: block;
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  &-slider {
+    position: sticky;
+    top: 5px;
+    overflow: hidden;
+
+    &-main {
+      height: 500px;
+      margin-bottom: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    &-thumbs {
+      .swiper {
+        &-slide {
+          height: 120px;
+        }
+      }
+    }
+
+    .swiper {
+      &-slide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        background-size: cover;
+        background-position: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+        }
+      }
+
+      &-button {
+        &-next,
+        &-prev {
+          width: 35px;
+          height: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 21px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          background: $white;
+          border: 2px solid $black;
+          z-index: 2;
+          cursor: pointer;
+        }
+
+        &-next {
+          right: 10px;
+        }
+
+        &-prev {
+          left: 10px;
+        }
+      }
+    }
+  }
+
+  .info {
+    &-title {
+      font-size: 21px;
+      font-weight: 700;
+      color: $black;
+      border-bottom: 4px solid $black;
+
+      @include media("<md") {
+        margin-top: 15px;
+      }
+    }
+
+    &-subtitle {
+      font-size: 21px;
+      font-weight: 700;
+      color: $black;
+      text-transform: uppercase;
+    }
+
+    &-rate {
+      margin-top: 5px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &-stars {
+        font-size: 12px;
+        color: rgb(181, 43, 43);
+      }
+
+      &-title {
+        margin-left: 10px;
+        font-size: 12px;
+        color: $black;
+        font-weight: 600;
+        opacity: .55;
+      }
+    }
+
+    &-cont {
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &-advantages {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .item {
+        min-width: 25%;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-icon {
+          width: 120px;
+          height: 120px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        &-title {
+          margin-top: 5px;
+          font-size: 14px;
+          font-weight: 500;
+          color: $black;
+          text-align: center;
+          font-style: italic;
+        }
+      }
+    }
+
+    &-actions {
+      margin-top: 25px;
+    }
+
+    &-tabs {
+      margin-top: 25px;
+      border-bottom: 2px solid black;
+      padding-bottom: 1px;
+      
+      @include media("<md") {
+        overflow-x: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+
+      .nav {
+        &-link {
+          padding: 5px 7px 3px 7px;
+          color: $black;
+          background: $white;
+          border-radius: 0;
+          border: 2px solid $white;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          &:hover {
+            color: $white;
+            background: $black;
+            border: 2px solid $black;
+          }
+
+          &.active {
+            color: $white;
+            background: $black;
+            border: 2px solid $black;
+
+            &:hover {
+              border: 2px solid $black;
+            }
+          }
+        }
+      }
+    }
+
+    &-params {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      @include media("<md") {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .p-inp {
+        margin-right: 25px;
+
+        @include media("<md") {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  &-combination {
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    &--title {
+      padding: 3px 8px;
+      display: block;
+      font-size: 18px;
+      font-weight: 800;
+      color: $white;
+      text-transform: uppercase;
+      background: $black;
+    }
+
+    .item {
+      margin-top: 25px;
+      margin-bottom: 0;
+      text-align: left;
+
+      &-title {
+        margin-bottom: 5px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      &-price {
+        margin-top: 5px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      &-reviews {
+        justify-content: flex-start;
+      }
+
+      &-body {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      &-btn {
+        margin-top: 10px;
+      }
+    }
+
+    .products {
+      img {
+        margin-bottom: 0 !important;
+        padding: 10px;
+      }
+
+      .woocommerce-loop-product__title {
+        padding: 0 !important;
+        margin-bottom: 5px !important;
+        font-size: 16px !important;
+        font-weight: 700;
+        color: $black;
+      }
+
+      .star-rating {
+        margin-bottom: 0;
+        font-size: 16px !important;
+        color: $black;
+      }
+
+      .price {
+        margin-top: 5px;
+        margin-bottom: 0 !important;
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        color: $black !important;
+      }
+
+      .button {
+        margin-top: 10px !important;
+        padding: 8px 7px;
+        color: $white;
+        background: $black;
+        border-radius: 0;
+        border: 2px solid $black;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: .2s;
+
+        &:hover {
+          color: $black;
+          background: $white;
+          border: 2px solid $black;
+        }
+      }
+    }
+  }
+
+  .product_meta {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .sku_wrapper {
+      font-size: 12px;
+      color: #000;
+      font-weight: 600;
+      opacity: .55;
+    }
+
+    .posted_in {
+      font-size: 12px;
+      color: #000;
+      font-weight: 600;
+      opacity: .55;
+
+      a {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+  }
+}

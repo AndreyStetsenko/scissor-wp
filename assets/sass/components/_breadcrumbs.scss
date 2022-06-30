@@ -1,0 +1,30 @@
+.breadcrumbs {
+  &--cont {
+    display: flex;
+    flex-direction: row;
+    
+    .item {
+      &-link {
+        &:first-child {
+          &:after {
+            display: none;
+          }
+        }
+  
+        &:last-child {
+          margin-right: 0;
+  
+          &:after {
+            display: none;
+          }
+        }
+  
+        &:after {
+          content: '=';
+          display: block;
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+}

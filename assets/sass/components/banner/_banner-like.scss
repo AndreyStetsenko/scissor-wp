@@ -1,0 +1,60 @@
+.banner-like {
+  width: 100%;
+
+  .items {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @include media("<md") {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .item {
+      width: 50%;
+      height: 680px;
+      max-height: 70vh;
+      padding: 35px 25px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: 1.5s ease-in-out;
+
+      @include media("<md") {
+        height: 480px;
+        width: 100%;
+        background-size: cover;
+      }
+
+      &-title {
+        padding: 10px;
+        background: rgba($black, .5);
+        font-size: 40px;
+        line-height: 42px;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        transition: .2s ease-in-out;
+
+        @include media("<md") {
+          font-size: 28px;
+          line-height: 38px;
+        }
+      }
+
+      &:hover {
+        background-size: 102%;
+
+        .item-title {
+          background: rgba($black, .7);
+        }
+      }
+    }
+  }
+}

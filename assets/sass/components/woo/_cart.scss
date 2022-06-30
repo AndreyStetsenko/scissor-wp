@@ -1,0 +1,126 @@
+.cart {
+  &-title {
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    .title {
+      margin-bottom: 15px;
+      display: block;
+      color: $black;
+      font-size: 28px;
+      line-height: 34px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .caption {
+      color: $black;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 400;
+    }
+  }
+
+  &-products {
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      margin-bottom: 20px;
+      padding: 15px 40px 15px 15px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: #F2F2F2;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &-img {
+        width: 115px;
+        height: 115px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-info {
+        max-width: 150px;
+        margin-right: 20px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          padding-bottom: 17px;
+          
+          a {
+            width: 100%;
+            display: block;
+            font-size: 18px;
+            color: #727272;
+            text-transform: uppercase;
+          }
+        }
+
+        .description {
+          
+        }
+
+        .subtotal {
+          font-size: 18px;
+          color: $black;
+          font-weight: 400;
+        }
+      }
+
+      &-actions {
+        margin-left: auto;
+
+        label {
+          display: none;
+        }
+      }
+
+      &-remove {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &_totals {
+    padding: 25px;
+    background: #F2F2F2;
+
+    h2 {
+      padding-bottom: 20px;
+      font-size: 28px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .wc-proceed-to-checkout {
+      .button {
+        margin-bottom: 0 !important;
+        padding: 5px 7px;
+        color: #fff;
+        background-color: #000 !important;
+        border-radius: 0;
+        border: 2px solid #000;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: .2s;
+
+        &:hover {
+          background: $white !important;
+          color: $black !important;
+        }
+      }
+    }
+  }
+}
