@@ -7,26 +7,48 @@
     padding-bottom: 25px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 
     @include media("<md") {
       flex-direction: column;
     }
+  }
 
-    // &:before {
-    //   content: '';
-    //   width: 50%;
-    //   height: 100%;
-    //   background-size: contain;
-    //   background-repeat: no-repeat;
-    //   background-image: url('../../images/black2 1.png');
-    //   z-index: 0;
-    // }
+  &-wrap {
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -10%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('../../images/black2 1.png');
+      z-index: 0;
+    }
+
+    &:after {
+      content: '';
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: -10%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('../../images/black2 1.png');
+      z-index: 0;
+    }
   }
 
   .item {
     width: 300px;
     height: 85vh;
+    margin-left: 17px;
+    margin-right: 17px;
     background: #000;
     z-index: 1;
 
@@ -34,6 +56,14 @@
       width: 100%;
       height: 240px;
       margin-bottom: 15px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
 
     &-img {

@@ -17,28 +17,26 @@ $page_home_top_banner = get_field('page_home_top_banner');
     </div>
 </div>
 
-<section class="banner-mission">
+<div class="complect-save">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2 class="title">Mission</h2>
-
-                <p class="content">
-                    Рождённый и развивающийся в период войны бренд Scissor hands является носителем уникального опыта. Он несет в себе темную глубинную энергию,которая конвертирована в наши продукты. Scissor Hands это энергичный бренд в мире мужского груминга, созданный экстремальными людьми целью которых создание продуктов рассказывающие истории впитанные из вне и передающие сопутствующий этой истории стиль и силу. Наша цель поднять вас на новую ступень эволюции и оставить яркий след в вашей жизни до ее конца.
-                </p>
-
-                <div class="banner-mission-link">
-                    <a href="#" class="btn btn-black">Подробно</a>
+                <div class="complect-save-cont">
+                    <h2 class="title">Save 20%</h2>
+                    <span class="caption">комплекты</span>
+                    <div class="link">
+                        <a href="#" class="btn btn-black">Подробно</a>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="logo">
-                    <img src="<?= getMedia('/images/logo-scissor.png') ?>" alt="">
+                <div class="complect-save-img">
+                    <img src="<?= getMedia('/images/aboutus.png') ?>" alt="">
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <div class="wrapper-title black">
     <div class="container">
@@ -65,9 +63,9 @@ $page_home_top_banner = get_field('page_home_top_banner');
 
 <section class="products-list-min">
     <h2 class="products-list-min-title article-level-1">
-        <i class="fa-solid fa-star"></i>
+        <span class="ico-promo-star mx-2"></span>
         Best Sellers
-        <i class="fa-solid fa-star"></i>
+        <span class="ico-promo-star mx-2"></span>
     </h2>
 
     <div class="wrapper">
@@ -148,27 +146,52 @@ $page_home_top_banner = get_field('page_home_top_banner');
 </div>
 
 <section class="home-categories">
+    <div class="home-categories-wrap">
+        <div class="container">
+            <div class="home-categories-cont">
+                <div class="item">
+                    <div class="item-img">
+                        <a href="#">
+                            <img src="<?= getMedia('/images/Untitled-8.png') ?>" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-img">
+                        <a href="#">
+                            <img src="<?= getMedia('/images/Untitled-7.png') ?>" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-img">
+                        <a href="#">
+                            <img src="<?= getMedia('/images/Untitled-6.png') ?>" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="banner-mission">
     <div class="container">
-        <div class="home-categories-cont">
-            <div class="item">
-                <div class="item-img">
-                    <a href="#">
-                        <img src="<?= getMedia('/images/Untitled-8.png') ?>" alt="">
-                    </a>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="title">Mission</h2>
+
+                <p class="content">
+                    Рождённый и развивающийся в период войны бренд Scissor hands является носителем уникального опыта. Он несет в себе темную глубинную энергию,которая конвертирована в наши продукты. Scissor Hands это энергичный бренд в мире мужского груминга, созданный экстремальными людьми целью которых создание продуктов рассказывающие истории впитанные из вне и передающие сопутствующий этой истории стиль и силу. Наша цель поднять вас на новую ступень эволюции и оставить яркий след в вашей жизни до ее конца.
+                </p>
+
+                <div class="banner-mission-link">
+                    <a href="#" class="btn btn-black">Подробно</a>
                 </div>
             </div>
-            <div class="item">
-                <div class="item-img">
-                    <a href="#">
-                        <img src="<?= getMedia('/images/Untitled-7.png') ?>" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="item-img">
-                    <a href="#">
-                        <img src="<?= getMedia('/images/Untitled-6.png') ?>" alt="">
-                    </a>
+            <div class="col-md-6">
+                <div class="logo">
+                    <img src="<?= getMedia('/images/logo-scissor.png') ?>" alt="">
                 </div>
             </div>
         </div>
@@ -177,7 +200,7 @@ $page_home_top_banner = get_field('page_home_top_banner');
 
 <section class="insta-posts">
     <div class="container">
-        <span class="insta-posts-title">Follow us on instagram <br>#scissorhandstm</span>
+        <span class="insta-posts-title">Follow us on instagram #scissorhandstm</span>
 
         <div class="insta-posts-contain">
 

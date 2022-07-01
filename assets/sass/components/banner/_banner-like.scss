@@ -1,8 +1,11 @@
 .banner-like {
   width: 100%;
+  background: $black;
 
   .items {
     width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -14,14 +17,13 @@
 
     .item {
       width: 50%;
-      height: 680px;
-      max-height: 70vh;
-      padding: 35px 25px;
+      overflow: hidden;
+      padding: 35px;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      background-size: 100%;
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       transition: 1.5s ease-in-out;
@@ -30,6 +32,12 @@
         height: 480px;
         width: 100%;
         background-size: cover;
+      }
+
+      &:before {
+        content: "";
+        padding-top: 100%;
+        float: left;
       }
 
       &-title {
@@ -45,14 +53,6 @@
         @include media("<md") {
           font-size: 28px;
           line-height: 38px;
-        }
-      }
-
-      &:hover {
-        background-size: 102%;
-
-        .item-title {
-          background: rgba($black, .7);
         }
       }
     }

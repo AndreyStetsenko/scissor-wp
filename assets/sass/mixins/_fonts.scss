@@ -89,3 +89,16 @@ $Inter: 'Inter';
     // font-family: $fontMulish;
   }
 }
+
+// Ico
+
+.ico {
+  &-promo-star {
+    width: 36px;
+    height: 36px;
+    display: block;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzNiAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDBMMjIuMDQxMyAxMi40Mzc3SDM1LjExOUwyNC41Mzg5IDIwLjEyNDZMMjguNTgwMSAzMi41NjIzTDE4IDI0Ljg3NTRMNy40MTk4NyAzMi41NjIzTDExLjQ2MTEgMjAuMTI0NkwwLjg4MDk4MyAxMi40Mzc3SDEzLjk1ODdMMTggMFoiIGZpbGw9ImJsYWNrIi8+Cjwvc3ZnPgo=');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
