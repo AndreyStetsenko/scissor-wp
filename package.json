@@ -87,7 +87,7 @@
         "perfect-scrollbar": "^1.5.0",
         "postcss": "^8.3.6",
         "swiper": "^8.1.6",
-        "vanilla-lazyload": "^17.8.1",
+        "vanilla-lazyload": "^17.8.2",
         "window-scroll": "^1.0.0",
         "wnumb": "^1.2.0"
     },

@@ -9,7 +9,7 @@ get_header();
 $page_home_top_banner = get_field('page_home_top_banner');
 ?>
 
-<div class="banner-head img-parallax" data-speed="-1" style="background-image: url(<?= getMedia('/images/shamp1.png') ?>)">
+<div class="banner-head img-parallax lazy" data-speed="-1" data-bg="<?= getMedia('/images/shamp1.png') ?>">
     <div class="container">
         <div class="banner-head-contain">
             <h2 class="banner-head-title">New shampoo Rocket</h2>
@@ -31,7 +31,7 @@ $page_home_top_banner = get_field('page_home_top_banner');
             </div>
             <div class="col-md-6">
                 <div class="complect-save-img">
-                    <img src="<?= getMedia('/images/aboutus.png') ?>" alt="">
+                    <img class="lazy" data-src="<?= getMedia('/images/aboutus.png') ?>" alt="">
                 </div>
             </div>
         </div>
@@ -46,16 +46,16 @@ $page_home_top_banner = get_field('page_home_top_banner');
 
 <section class="banner-like">
     <div class="items">
-        <div class="item" style="background-image: url(<?= getMedia('/images/распаковка.png') ?>)">
+        <div class="item lazy" data-bg="<?= getMedia('/images/распаковка.png') ?>">
             <span class="item-title">Невероятная распаковка</span>
         </div>
-        <div class="item" style="background-image: url(<?= getMedia('/images/аромат.png') ?>)">
+        <div class="item lazy" data-bg="<?= getMedia('/images/аромат.png') ?>">
             <span class="item-title">Екстримальные ароматы</span>
         </div>
-        <div class="item" style="background-image: url(<?= getMedia('/images/фото.png') ?>)">
+        <div class="item lazy" data-bg="<?= getMedia('/images/фото.png') ?>">
             <span class="item-title">Новый стиль - новая жизнь</span>
         </div>
-        <div class="item" style="background-image: url(<?= getMedia('/images/вселенная.png') ?>)">
+        <div class="item lazy" data-bg="<?= getMedia('/images/вселенная.png') ?>">
             <span class="item-title">Большой выбор</span>
         </div>
     </div>
@@ -134,7 +134,7 @@ $page_home_top_banner = get_field('page_home_top_banner');
 <section class="hands-product">
     <div class="container">
         <div class="hands-product-img">
-            <img src="<?= getMedia('/images/allproduct 1.png') ?>" alt="">
+            <img class="lazy" data-src="<?= getMedia('/images/allproduct 1.png') ?>" alt="">
         </div>
     </div>
 </section>
@@ -152,21 +152,21 @@ $page_home_top_banner = get_field('page_home_top_banner');
                 <div class="item">
                     <div class="item-img">
                         <a href="#">
-                            <img src="<?= getMedia('/images/Untitled-8.png') ?>" alt="">
+                            <img class="lazy" data-src="<?= getMedia('/images/Untitled-8.png') ?>" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="item-img">
                         <a href="#">
-                            <img src="<?= getMedia('/images/Untitled-7.png') ?>" alt="">
+                            <img class="lazy" data-src="<?= getMedia('/images/Untitled-7.png') ?>" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="item-img">
                         <a href="#">
-                            <img src="<?= getMedia('/images/Untitled-6.png') ?>" alt="">
+                            <img class="lazy" data-src="<?= getMedia('/images/Untitled-6.png') ?>" alt="">
                         </a>
                     </div>
                 </div>
@@ -191,7 +191,7 @@ $page_home_top_banner = get_field('page_home_top_banner');
             </div>
             <div class="col-md-6">
                 <div class="logo">
-                    <img src="<?= getMedia('/images/logo-scissor.png') ?>" alt="">
+                    <img class="lazy" data-src="<?= getMedia('/images/logo-scissor.png') ?>" alt="">
                 </div>
             </div>
         </div>

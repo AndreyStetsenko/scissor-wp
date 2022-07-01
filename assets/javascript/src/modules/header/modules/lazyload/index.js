@@ -1,7 +1,8 @@
 import LazyLoad from 'vanilla-lazyload';
 
 export default function lazyload() {
-    const lazyLoadInstance = new LazyLoad({
+    new LazyLoad({
+        // use_native: true,
         elements_selector: '.lazy',
         load_delay: 300,
 
@@ -13,6 +14,4 @@ export default function lazyload() {
             el.classList.add('is-error');
         }
     });
-
-    lazyLoadInstance.update();
 }
