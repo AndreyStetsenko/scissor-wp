@@ -84,7 +84,7 @@ global $woocommerce;
                                     </a>
 
                                     <ul class="dropdown-menu" aria-labelledby="currLang">
-                                        <?php pll_the_languages() ?>
+                                        <?php // pll_the_languages() ?>
                                     </ul>
                                 </div>
                             </li>
