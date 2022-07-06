@@ -115,11 +115,15 @@
               }
 
               &.img {
-                width: 400px;
-                height: 75px;
+                width: 25vw;
+                height: 10vh;
                 position: relative;
                 background-size: cover;
                 background-repeat: no-repeat;
+
+                &:last-child {
+                  height: calc(10vh + 7px);
+                }
                 
                 &-hair {
                   background-image: url('../../images/1_hair.jpg');
