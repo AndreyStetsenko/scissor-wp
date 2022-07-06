@@ -21,4 +21,19 @@ button,
       border: 2px solid $black;
     }
   }
+
+  &-search {
+    color: $white;
+    border: none;
+
+    &:hover {
+      border: none;
+      color: $white;
+    }
+
+    &:active,
+    &:focus {
+      color: $white;
+    }
+  }
 }

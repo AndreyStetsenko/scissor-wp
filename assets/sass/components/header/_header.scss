@@ -1,4 +1,59 @@
 .header {
   display: flex;
   flex-direction: column;
+
+  #btnSearchHeader {
+    font-size: 12px;
+  }
+
+  &-search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &--input {
+      width: 0;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transition: .2s;
+
+      &.show {
+        width: auto;
+        opacity: 1;
+        transition: .2s;
+      }
+
+      .close {
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        font-size: 10px;
+        color: rgba($white, .5);
+        cursor: pointer;
+      }
+    }
+
+    input {
+      height: 28px;
+      padding: 0;
+      margin-right: 10px;
+      background: transparent;
+      border: none;
+      border-bottom: 3px solid $white;
+      font-size: 14px;
+      color: $white;
+      font-weight: 300;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+
+      &:focus,
+      &:active {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+  }
 }

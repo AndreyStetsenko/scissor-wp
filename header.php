@@ -78,6 +78,17 @@ global $woocommerce;
                     <div class="main-nav--nav">
                         <ul class="nav-list">
                             <li>
+                                <form action="" class="header-search">
+                                    <div class="header-search--input" id="containerSearchHeader">
+                                        <input type="text" placeholder="Пошук..." id="inputSearchHeader">
+                                        <div class="close" id="closeSearchHeader">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-search" id="btnSearchHeader" data-expended="false"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </form>
+                            </li>
+                            <!-- <li>
                                 <div class="dropdown dropdown-lang">
                                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="currLang" data-bs-toggle="dropdown" aria-expanded="false">
                                         
@@ -87,8 +98,10 @@ global $woocommerce;
                                         <?php // pll_the_languages() ?>
                                     </ul>
                                 </div>
+                            </li> -->
+                            <li>
+                                <a href="#"><i class="fa-regular fa-user me-1"></i> Аккаунт</a>
                             </li>
-                            <li><a href="#">Аккаунт</a></li>
                             <li><a href="<?= wc_get_cart_url() ?>">Корзина (<?= WC()->cart->get_cart_contents_count(); ?>)</a></li>
                         </ul>
                     </div>
