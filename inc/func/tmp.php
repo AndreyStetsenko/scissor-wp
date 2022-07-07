@@ -78,3 +78,25 @@ function wpb_custom_new_menu() {
   );
 }
 add_action( 'init', 'wpb_custom_new_menu' );
+
+function my_flag_only_language_switcher() {
+    $languages = apply_filters( 'wpml_active_languages', NULL, array( 'skip_missing' => 0 ) );
+ 
+    if( !empty( $languages ) ) {
+        foreach( $languages as $language ){
+            $native_name = $language['active'] ? strtoupper( $language['code'] ) : $language['code'];
+ 
+            if( !$language['active'] ) {
+				echo '<li><a href="' . esc_url( $language['url'] ) . '">';
+				echo esc_html( $native_name ) . ' ';
+				echo '</a></li>';
+			}
+        }
+    }
+}
+
+add_action( 'after_setup_theme', 'my_theme_setup' );
+
+function my_theme_setup(){
+  load_theme_textdomain( 'wpml_theme', get_template_directory() . '/languages' );
+}

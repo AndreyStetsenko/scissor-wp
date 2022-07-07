@@ -16,3 +16,29 @@ function my_acf_op_init() {
         ));
     }
 }
+
+add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
+
+function my_wp_nav_menu_objects( $items, $args ) {
+	
+	// loop
+	foreach( $items as &$item ) {
+		
+		// vars
+		$image = get_field('menu_img', $item);
+		
+		
+		// append image
+		if( $image ) {
+			
+			$item->title = '<img src="' . $image . '"><span class="nav-item-text">' . $item->title . '</span>';
+			
+		}
+		
+	}
+	
+	
+	// return
+	return $items;
+	
+}
