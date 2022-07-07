@@ -1,11 +1,16 @@
 export default function headerAnim() {
-    // $(window).scroll(() => {
-    //     const $block = $('.main-nav'); // ID шапки
+    // Сразу создаём переменные
+    const navbar = document.getElementById('navbar');
+    const active_class = 'sticky';
 
-    //     if ($(window).scrollTop() > $block.offset().top) { // Тут идея в том, что блок привязывается к верху, как только "прилипает" к верху окна браузера. Замените $block.offset().top на любое значение и получится, что когда вы проскроллили на большее кол-во пиксейлей, чем указали, добавиться класс к шапке.
-    //         $block.addClass('fixed'); // Добавляем класс fixed. В стилях указываем для него position:fixed, height и прочее, чтобы сделать шапку фиксированной.
-    //     } else {
-    //         $block.removeClass('fixed'); // удаляем класс
-    //     }
-    // });
+    /**
+     * Слушаем событие прокрутки
+     */
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 200) {
+            navbar.classList.add(active_class);
+        } else {
+            navbar.classList.remove(active_class);
+        }
+    });
 }

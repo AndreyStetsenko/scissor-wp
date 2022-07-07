@@ -45,7 +45,7 @@ global $woocommerce;
         }
         ?>
 
-        <div class="main-nav">
+        <div class="main-nav" id="navbar">
             <div class="container">
 
                 <button class="main-nav--toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,7 +100,7 @@ global $woocommerce;
                                 </div>
                             </li>
                             <li>
-                                <a href="#"><i class="fa-regular fa-user me-1"></i> <?php __('Аккаунт', 'account') ?></a>
+                                <a href="#"><i class="fa-regular fa-user me-1"></i> <?php esc_html_e('Аккаунт', 'scissor'); ?></a>
                             </li>
                             <li><a href="<?= wc_get_cart_url() ?>">Корзина (<?= WC()->cart->get_cart_contents_count(); ?>)</a></li>
                         </ul>

@@ -6,7 +6,7 @@ import VideoBanner from './modules/videoBanner';
 import lazyload from './modules/lazyload';
 import language from './modules/language';
 import SearchHeader from './modules/searchHeader';
-// import headerAnim from './modules/headerAnim';
+import headerAnim from './modules/headerAnim';
 
 export default function header() {
     helpers();
@@ -14,7 +14,7 @@ export default function header() {
     lazyload();
     language();
     new SearchHeader();
-    // headerAnim();
+    headerAnim();
 
     window.addEventListener('error', (e) => {
         const { message, filename, lineno, colno, error } = e;

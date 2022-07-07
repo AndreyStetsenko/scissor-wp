@@ -94,9 +94,3 @@ function my_flag_only_language_switcher() {
         }
     }
 }
-
-add_action( 'after_setup_theme', 'my_theme_setup' );
-
-function my_theme_setup(){
-  load_theme_textdomain( 'wpml_theme', get_template_directory() . '/languages' );
-}

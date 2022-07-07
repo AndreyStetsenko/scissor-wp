@@ -1,6 +1,8 @@
 .header {
+  padding-bottom: 62px;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   #btnSearchHeader {
     font-size: 12px;

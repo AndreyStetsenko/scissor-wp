@@ -2,6 +2,10 @@
   padding: 6px 0;
   background: $white;
 
+  &.fixed {
+    margin-bottom: 62px;
+  }
+
   &--cont {
     position: relative;
     display: flex;
