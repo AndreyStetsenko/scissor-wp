@@ -30,7 +30,7 @@ global $woocommerce;
         $promo_banner = get_field('promo_banner', 'options');
         if( $promo_banner ) {
             echo '<div class="promo-banner">';
-            echo '<div class="container">';
+            echo '<div class="container-fluid">';
             echo '<div class="promo-banner--cont">';
             foreach( $promo_banner as $item ) {
                 $row = '<span>';

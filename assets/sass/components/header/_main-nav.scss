@@ -25,6 +25,11 @@
     align-items: center;
 
     @include media(">md") {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @include media(">md") {
       display: flex !important;
     }
 
@@ -216,8 +221,8 @@
   }
 
   &--logo {
-    max-width: 185px;
-    height: 45px;
+    // max-width: 185px;
+    height: 55px;
     margin: 0 auto;
     display: block;
     position: absolute;
