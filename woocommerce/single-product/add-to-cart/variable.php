@@ -42,6 +42,8 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							
 									foreach( $available_variations as $variation ){
 											$option_value = array();
+
+											// var_dump($variation);
 							
 											foreach( $variation['attributes'] as $attribute => $term_slug ){
 													$taxonomy = str_replace( 'attribute_', '', $attribute );
@@ -54,7 +56,8 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							
 											$output .= '<div class="item">';
 											$output .= '<input type="radio" name="mas" value="'.$option_value.'" id="'.$variation['variation_id'].'">';
-											$output .= '<label class="variable_inp" data-price="' . $variation['display_price'] . '" data-id="'.$variation['attributes']['attribute_pa_volume'].'" for="'.$variation['variation_id'].'">'.$option_value.'</label>';
+											// $output .= '<label class="variable_inp" data-price="' . $variation['display_price'] . '" data-id="'.$variation['attributes']['attribute_pa_volume'].'" for="'.$variation['variation_id'].'">'.$option_value.'</label>';
+											$output .= '<label class="variable_inp" data-price="' . $variation['display_price'] . '" data-id="'.$variation['variation_id'].'" for="'.$variation['variation_id'].'">'.$option_value.'</label>';
 											$output .= '</div>';
 											// var_dump($variation);
 							

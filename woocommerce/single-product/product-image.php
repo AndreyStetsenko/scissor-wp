@@ -59,7 +59,7 @@ $wrapper_classes   = apply_filters(
 				else :
 					echo '<div class="swiper-wrapper">';
 					$html  = '<div class="swiper-slide">';
-					$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
+					$html .= wc_get_gallery_image_html( $post_thumbnail_id, true );
 					$html .= '</div>';
 					echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
 					echo '</div>';

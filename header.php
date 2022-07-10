@@ -88,17 +88,17 @@ global $woocommerce;
                                     <button class="btn btn-search" id="btnSearchHeader" data-expended="false"><i class="fa-solid fa-magnifying-glass"></i></button>
                                 </form>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <div class="dropdown dropdown-lang">
                                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="currLang" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <?= apply_filters( 'wpml_current_language', NULL ) ?>
+
                                     </a>
 
                                     <ul class="dropdown-menu" aria-labelledby="currLang">
-                                        <?= my_flag_only_language_switcher() ?>
+
                                     </ul>
                                 </div>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="#"><i class="fa-regular fa-user me-1"></i> <?php esc_html_e('Аккаунт', 'scissor'); ?></a>
                             </li>

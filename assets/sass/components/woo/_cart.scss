@@ -123,4 +123,13 @@
       }
     }
   }
+
+  &-discount {
+    .woocommerce-remove-coupon {
+      padding: 2px 7px;
+      color: #fff;
+      font-size: 12px;
+      background: #000;
+    }
+  }
 }

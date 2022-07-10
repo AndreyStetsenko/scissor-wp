@@ -58,3 +58,128 @@
     }
   }
 }
+
+.checkout-form {
+  padding: 15px 35px;
+  background: #f2f2f2;
+
+  .form {
+    &-row {
+      label {
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 18px;
+        color: $black;
+      }
+
+      input,
+      textarea {
+        height: 40px;
+        border: none;
+        border-radius: 8px;
+        padding: 0 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #000;
+        background: #fff;
+        outline: none;
+        box-shadow: none;
+      }
+
+      textarea {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+
+      .selection {
+        .select2-selection--single {
+          height: 40px;
+          display: flex;
+          align-items: center;
+          border: none;
+          border-radius: 8px;
+          padding: 0 10px;
+          font-size: 14px;
+          font-weight: 500;
+          color: #000;
+          background: #fff;
+          outline: none;
+          box-shadow: none;
+
+          .select2-selection__rendered {
+            padding-left: 0;
+          }
+
+          .select2-selection__arrow {
+            top: 7px;
+            right: 6px;
+          }
+        }
+      }
+    }
+  }
+  
+  .woocommerce-checkout-review-order {
+    &-table {
+      border: none !important;
+
+      th,
+      td {
+        border: none !important;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tbody {
+        display: none;
+      }
+    }
+  }
+
+  #payment {
+    background: transparent;
+    
+    .wc_payment_methods {
+      // padding: 0 !important;
+    }
+
+    .woocommerce-info {
+      border-top-color: $black;
+
+      &:before {
+        color: $black;
+      }
+    }
+  }
+}
+
+.woocommerce-privacy-policy-text {
+  font-size: 14px;
+  line-height: 24px;
+  color: black;
+}
+
+.select2-container {
+  .select2-dropdown {
+    border: none;
+    box-shadow: 2px 2px 16px rgba($black, .1);
+  }
+}
+
+.woocommerce-order {
+  margin-top: 50px;
+  padding: 25px;
+  background: #f2f2f2;
+
+  .woocommerce-notice {
+    font-size: 24px;
+  }
+
+  .woocommerce-order-overview {
+    background: #000;
+    padding: 15px 10px 10px;
+    color: #fff;
+  }
+}

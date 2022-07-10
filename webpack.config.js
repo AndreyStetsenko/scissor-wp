@@ -53,6 +53,9 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
 		}),
+		new webpack.SourceMapDevToolPlugin({
+			exclude: ['popper.js']
+		})
 		/*new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
