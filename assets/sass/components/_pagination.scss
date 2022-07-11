@@ -1,0 +1,20 @@
+.woocommerce-pagination {
+    .page-numbers {
+        border: none !important;
+
+        li {
+            border-right: none !important;
+            background: $black;
+
+            a {
+                color: $white;
+            }
+
+            .current {
+                background: $black !important;
+                color: $white !important;
+                font-weight: 600;
+            }
+        }
+    }
+}

@@ -89,6 +89,7 @@ get_header( 'shop' );
 							'posts_per_page' => 6,
 							'meta_key' => 'total_sales',
 							'orderby' => 'meta_value_num',
+							'paged' => $paged,
 						);
 
 						$loop = new WP_Query( $args );

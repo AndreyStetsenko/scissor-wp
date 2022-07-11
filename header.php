@@ -78,9 +78,10 @@ global $woocommerce;
                     <div class="main-nav--nav">
                         <ul class="nav-list">
                             <li>
-                                <form action="" class="header-search">
+                                <form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-search">
                                     <div class="header-search--input" id="containerSearchHeader">
-                                        <input type="text" placeholder="Пошук..." id="inputSearchHeader">
+                                        <input type="text" placeholder="Пошук..." id="inputSearchHeader" name="s" value="<?php echo get_search_query(); ?>">
+                                        <input type="hidden" name="post_type" value="product" />
                                         <div class="close" id="closeSearchHeader">
                                             <i class="fa-solid fa-xmark"></i>
                                         </div>
@@ -100,7 +101,7 @@ global $woocommerce;
                                 </div>
                             </li> -->
                             <li>
-                                <a href="#"><i class="fa-regular fa-user me-1"></i> <?php esc_html_e('Аккаунт', 'scissor'); ?></a>
+                                <a href="<?= is_user_logged_in() == true ? '/account' : '/login' ?>"><i class="fa-regular fa-user me-1"></i> <?php esc_html_e('Аккаунт', 'scissor'); ?></a>
                             </li>
                             <li><a href="<?= wc_get_cart_url() ?>">Корзина (<?= WC()->cart->get_cart_contents_count(); ?>)</a></li>
                         </ul>

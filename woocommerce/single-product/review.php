@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="comment-item--user">
 		<div class="comment-item--main">
 			<div class="name">
-				<span class="username">Андрей</span>
+				<span class="username">Изменить</span>
 				<div class="rate">
 					<?php
 					/**

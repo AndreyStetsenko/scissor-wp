@@ -1,0 +1,43 @@
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+
+    .form-floating {
+        &.error {
+            input {
+                background-color: rgba(red, 0.1);
+            }
+        }
+
+        &:focus-within {
+            z-index: 2;
+        }
+    }
+
+    .form-lots {
+        .form-floating {
+            input {
+                border-radius: 0;
+            }
+
+            &:first-child {
+                input {
+                    border-top-right-radius: 4px;
+                    border-top-left-radius: 4px;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: -1px;
+            }
+
+            &:last-child {
+                input {
+                    margin-bottom: 10px;
+                    border-bottom-left-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                }
+            }
+        }
+    }
+}

@@ -5,19 +5,50 @@
 }
 
 .commentlist {
+  max-width: 750px;
+  margin: 0 auto !important;
   padding-left: 0;
 
+  .children {
+    margin-left: 25px !important;
+  }
+
   .comment-item {
-    max-width: 750px;
-    margin: 0 auto 25px;
+    margin: 0 auto 15px;
     padding: 15px 25px;
-    background: $black;
+    background: #f8f8f8;
 
     &--user {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+    }
+
+    &--actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      a {
+        margin-right: 3px;
+        font-size: 12px;
+        color: #6d6d6d;
+        font-weight: 500;
+
+        &:after {
+          content: '|';
+          margin-left: 3px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+
+          &:after {
+            content: '';
+            margin-left: 0;
+          }
+        }
+      }
     }
 
     &--main {
@@ -27,7 +58,7 @@
         align-items: center;
 
         .username {
-          color: $white;
+          color: $black;
           font-size: 21px;
           text-transform: uppercase;
           font-weight: 700;
@@ -39,7 +70,35 @@
       }
 
       .age {
-        color: $white;
+        color: $black;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+
+    .metas {
+      display: flex;
+      flex-direction: row;
+
+      &-item {
+        margin-top: 5px;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      &-first {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 500;
+        opacity: .7;
+      }
+
+      &-second {
         font-size: 18px;
         font-weight: 700;
       }
@@ -63,7 +122,11 @@
 
       .description {
         max-width: 600px;
-        color: $white;
+        color: $black;
+
+        p {
+          margin-bottom: 0;
+        }
       }
 
       .meta {
@@ -76,7 +139,7 @@
         }
 
         .woocommerce-review__published-date {
-          color: $white;
+          color: $black;
           font-size: 12px;
           opacity: .6;
         }
@@ -124,7 +187,7 @@
   max-width: 750px;
   margin: 0 auto 25px !important;
   padding: 15px 25px !important;
-  background: $black !important;
+  background: #f8f8f8 !important;
 
   .comment-reply-title {
     margin-bottom: 10px;
@@ -133,7 +196,38 @@
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
-    color: $white;
+    color: $black;
+
+    a {
+      color: $black;
+    }
+
+    small {
+      display: block;
+      
+      a {
+        font-size: 14px;
+        color: black;
+      }
+    }
+  }
+
+  .comment-form-comment {
+    input {
+      margin-left: 15px;
+      background: transparent;
+      color: $black;
+      font-size: 16px;
+      font-weight: 300;
+      border: none;
+      border-bottom: 1px solid $black;
+
+      &:focus,
+      &:active {
+        box-shadow: none;
+        outline: none;
+      }
+    }
   }
 
   .comment-form-rating {
@@ -144,7 +238,7 @@
 
     label {
       font-size: 18px;
-      color: #fff;
+      color: $black;
       font-weight: 600;
 
       .required {
@@ -169,7 +263,7 @@
     label {
       margin-bottom: 5px;
       font-size: 18px;
-      color: #fff;
+      color: $black;
       font-weight: 600;
 
       .required {
@@ -178,12 +272,12 @@
     }
 
     textarea {
-      background: black;
-      color: white;
+      background: transparent;
+      color: $black;
       font-size: 16px;
       font-weight: 300;
       border: none;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid $black;
 
       &:focus,
       &:active {
