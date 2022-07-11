@@ -137,7 +137,7 @@ function true_save_profile_fields( $user_id ) {
  
 }
 
-// Перенаправление со страниц входа, например, с http://yoursite.com/wp-login.php
+// Перенаправление со стандартных страниц входа, например, с http://yoursite.com/wp-login.php
  
 function custom_login() {
 	echo header("Location: " . get_bloginfo( 'url' ) . "/login");
