@@ -118,9 +118,22 @@ function cart_update_qty_script() {
 // Add phone number field
 
 function add_review_phone_field_on_comment_form() {
-	echo '<p class="comment-form-comment comment-form-older uk-margin-top"><label for="older">' . __( 'Возраст', 'text-domain' ) . '</label><span class="required"></span><input class="uk-input uk-width-large uk-display-block" type="text" name="older" id="older" required/></p>';
-	echo '<p class="comment-form-comment comment-form-hairstyle uk-margin-top"><label for="hairstyle">' . __( 'Тип волос', 'text-domain' ) . '</label><span class="required"></span><input class="uk-input uk-width-large uk-display-block" type="text" name="hairstyle" id="hairstyle" required/></p>';
-	echo '<p class="comment-form-comment comment-form-hair uk-margin-top"><label for="hair">' . __( 'Длинна волос', 'text-domain' ) . '</label><span class="required"></span><input class="uk-input uk-width-large uk-display-block" type="text" name="hair" id="hair" required/></p>';
+	if (!isset($_GET['replytocom'])) {
+		echo '<div class="comment-form-libs">';
+		echo '<div class="comment-form-comment comment-form-older uk-margin-top">
+		<label for="older">' . __( 'Возраст', 'text-domain' ) . '</label>
+		<div><input class="uk-input uk-width-large uk-display-block" type="text" name="older" id="older" required/></div>
+		</div>';
+		echo '<div class="comment-form-comment comment-form-hairstyle uk-margin-top">
+		<label for="hairstyle">' . __( 'Тип волос', 'text-domain' ) . '</label>
+		<div><input class="uk-input uk-width-large uk-display-block" type="text" name="hairstyle" id="hairstyle" required/></div>
+		</div>';
+		echo '<div class="comment-form-comment comment-form-hair uk-margin-top">
+		<label for="hair">' . __( 'Длинна волос', 'text-domain' ) . '</label>
+		<div><input class="uk-input uk-width-large uk-display-block" type="text" name="hair" id="hair" required/></div>
+		</div>';
+		echo '</div>';
+	}
 }
 add_action( 'comment_form_logged_in_after', 'add_review_phone_field_on_comment_form' );
 add_action( 'comment_form_after_fields', 'add_review_phone_field_on_comment_form' );

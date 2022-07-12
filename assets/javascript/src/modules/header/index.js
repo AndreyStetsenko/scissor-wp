@@ -1,4 +1,4 @@
-// import 'jquery';
+import 'jquery';
 import '@popperjs/core';
 import 'bootstrap';
 import helpers from './modules/helpers';
@@ -7,6 +7,7 @@ import lazyload from './modules/lazyload';
 import language from './modules/language';
 import SearchHeader from './modules/searchHeader';
 import headerAnim from './modules/headerAnim';
+// import SendComments from './modules/sendComments';
 
 export default function header() {
     helpers();
@@ -15,6 +16,7 @@ export default function header() {
     language();
     new SearchHeader();
     headerAnim();
+    // new SendComments();
 
     window.addEventListener('error', (e) => {
         const { message, filename, lineno, colno, error } = e;
