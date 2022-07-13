@@ -11,6 +11,8 @@
 
 ?>
 
+</div>
+
 <footer class="footer" id="footer">
     <div class="wrapper">
         <div class="container">
@@ -64,6 +66,8 @@
     </div>
 </footer>
 
+<?php require get_template_directory() . '/inc/footer-auth.php'; ?>
+
 <?php wp_footer(); ?>
 
 <script>
@@ -75,5 +79,6 @@
 		$('#pa_volume').change();
 	});
 </script>
+
 </body>
 </html>

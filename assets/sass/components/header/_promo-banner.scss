@@ -1,5 +1,7 @@
 .promo-banner {
-  padding: 6px 0;
+  height: 30px;
+  display: flex;
+  align-items: center;
   background: $white;
 
   &.fixed {

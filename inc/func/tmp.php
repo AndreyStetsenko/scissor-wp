@@ -373,3 +373,30 @@ function true_add_ajax_comment(){
  
 add_action('wp_ajax_ajaxcomments', 'true_add_ajax_comment'); // wp_ajax_{значение параметра action}
 add_action('wp_ajax_nopriv_ajaxcomments', 'true_add_ajax_comment'); // wp_ajax_nopriv_{значение параметра action}
+
+function javascript_variables_client() { ?>
+	<input type="hidden" name="ajax_url" value="<?= admin_url( "admin-ajax.php" ) ?>">
+	<input type="hidden" name="ajax_nonce" value="<?= wp_create_nonce( "wplb-nonce" ) ?>">
+
+  <script type="text/javascript">
+    var ajax_url = '<?= admin_url( "admin-ajax.php" ); ?>';
+    var ajax_nonce = '<?= wp_create_nonce( "wplb-nonce" ); ?>';
+  </script>
+	<?php
+}
+
+add_action ( 'wp_head', 'javascript_variables_client' );
+
+// Include Admin Ajax
+function javascript_variables_admin() { ?>
+	<input type="hidden" name="ajax_url" value="<?= admin_url( "admin-ajax.php" ) ?>">
+	<input type="hidden" name="ajax_nonce" value="<?= wp_create_nonce( "wplb-nonce" ) ?>">
+
+  <script type="text/javascript">
+    var ajax_url = '<?= admin_url( "admin-ajax.php" ); ?>';
+    var ajax_nonce = '<?= wp_create_nonce( "wplb-nonce" ); ?>';
+  </script>
+	<?php
+}
+
+add_action ( 'admin_head', 'javascript_variables_admin' );

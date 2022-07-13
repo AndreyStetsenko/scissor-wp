@@ -1,4 +1,4 @@
-import 'jquery';
+// import 'jquery';
 import '@popperjs/core';
 import 'bootstrap';
 import helpers from './modules/helpers';
@@ -8,6 +8,7 @@ import language from './modules/language';
 import SearchHeader from './modules/searchHeader';
 import headerAnim from './modules/headerAnim';
 // import SendComments from './modules/sendComments';
+import Auth from './modules/Auth';
 
 export default function header() {
     helpers();
@@ -17,6 +18,7 @@ export default function header() {
     new SearchHeader();
     headerAnim();
     // new SendComments();
+    new Auth();
 
     window.addEventListener('error', (e) => {
         const { message, filename, lineno, colno, error } = e;

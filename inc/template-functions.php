@@ -55,3 +55,8 @@ require get_template_directory() . '/inc/func/tmp.php';
  * ACF
  */
 require get_template_directory() . '/inc/func/acf.php';
+
+/**
+ * Auth
+ */
+require get_template_directory() . '/inc/func/auth.php';

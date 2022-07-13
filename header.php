@@ -101,7 +101,18 @@ global $woocommerce;
                                 </div>
                             </li> -->
                             <li>
-                                <a href="<?= is_user_logged_in() == true ? '/account' : '/login' ?>"><i class="fa-regular fa-user me-1"></i> <?php esc_html_e('Аккаунт', 'scissor'); ?></a>
+                                <?php if ( is_user_logged_in() == true ) : ?>
+                                <a href="/my-account"><i class="fa-regular fa-user me-1"></i> <?php esc_html_e('Аккаунт', 'scissor'); ?></a>
+                                <?php else : ?>
+                                    <?php if ( is_page('login') && is_page('register') ) : ?>
+                                    <a href="/login"><i class="fa-regular fa-user me-1"></i> <?php esc_html_e('Аккаунт', 'scissor'); ?></a>
+                                    <?php else: ?>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">
+                                        <i class="fa-regular fa-user me-1"></i>
+                                        <?php esc_html_e('Аккаунт', 'scissor'); ?>
+                                    </a>
+                                    <?php endif; ?>
+                                <?php endif; ?>
                             </li>
                             <li><a href="<?= wc_get_cart_url() ?>">Корзина (<?= WC()->cart->get_cart_contents_count(); ?>)</a></li>
                         </ul>
@@ -110,3 +121,4 @@ global $woocommerce;
             </div>
         </div>
     </header>
+    <div class="site-wrap">
