@@ -44,7 +44,7 @@ export default class Auth {
     }
     productItem(el) {
         const item = `
-        <div class="col-md-4 product-first item">
+        <div class="col-md-4 product-first item bg-white">
             <a href="${el.link}" class="item-img">
                 ${el.img}
             </a>
