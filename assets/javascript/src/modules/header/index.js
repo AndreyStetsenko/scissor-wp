@@ -9,6 +9,7 @@ import SearchHeader from './modules/searchHeader';
 import headerAnim from './modules/headerAnim';
 // import SendComments from './modules/sendComments';
 import Auth from './modules/Auth';
+import Filter from './modules/Filter';
 
 export default function header() {
     helpers();
@@ -19,6 +20,7 @@ export default function header() {
     headerAnim();
     // new SendComments();
     new Auth();
+    new Filter();
 
     window.addEventListener('error', (e) => {
         const { message, filename, lineno, colno, error } = e;

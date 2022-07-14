@@ -1,0 +1,42 @@
+.services {
+    padding-top: 33px;
+    background: #F5F5F5;
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item {
+        margin-bottom: 28px;
+        display: flex;
+        flex-direction: column;
+
+        &-body {
+            padding-top: 33px;
+            padding-bottom: 33px;
+            background: $white;
+        }
+
+        .title {
+            margin-bottom: 33px;
+            font-size: 23px;
+            line-height: 28px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $black;
+            text-align: center;
+        }
+
+        .content {
+            font-size: 23px;
+            line-height: 36px;
+            font-weight: 400;
+            color: $black;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

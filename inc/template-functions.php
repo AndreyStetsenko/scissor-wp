@@ -60,3 +60,13 @@ require get_template_directory() . '/inc/func/acf.php';
  * Auth
  */
 require get_template_directory() . '/inc/func/auth.php';
+
+/**
+ * Custom Login
+ */
+require get_template_directory() . '/inc/func/login.php';
+
+/**
+ * Filter
+ */
+require get_template_directory() . '/inc/func/filter.php';
