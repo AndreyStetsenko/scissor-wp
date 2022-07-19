@@ -97,7 +97,7 @@ global $woocommerce;
 
                                     <ul class="dropdown-menu" aria-labelledby="currLang">
                                         <?php if ( function_exists('pll_the_languages') ) : ?>
-                                            <?php pll_the_languages( array( 'show_flags' => 0, 'show_names' => 1 ) ) ?>
+                                            <?php // pll_the_languages( array( 'show_flags' => 0, 'show_names' => 1 ) ) ?>
                                         <?php endif; ?>
                                     </ul>
                                 </div>
