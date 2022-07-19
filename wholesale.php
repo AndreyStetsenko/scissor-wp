@@ -23,8 +23,15 @@ get_header();
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropFilterMenu">
                     <?php
-                    $args = array('taxonomy' => 'product_cat');
+                    $args = array(
+                        'taxonomy'    => 'product_cat',
+                        'orderby'     => 'id', // здесь по какому полю сортировать
+                        'hide_empty'  => false, // скрывать категории без товаров или нет
+                        'parent'      => 0 // id родительской категории
+                    );
                     $categories = get_categories( $args );
+
+                    
                     
                     foreach( $categories as $item_cat ) {
                         echo '<li><a class="dropdown-item item" 

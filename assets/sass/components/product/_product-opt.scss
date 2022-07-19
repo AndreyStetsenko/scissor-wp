@@ -1,0 +1,19 @@
+.product-opt {
+  .item {
+    &-img {
+      width: 100%;
+      margin: 0 auto;
+
+      img {
+        object-fit: cover !important;
+      }
+    }
+
+    &-body {
+      width: 100% !important;
+      margin-top: 0 !important;
+      padding: 12px 20px;
+      background: $white;
+    }
+  }
+}
