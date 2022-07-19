@@ -21,12 +21,18 @@ get_header( 'shop' );
 ?>
 
 <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-<div class="wrapper-title black inner">
+<div class="wrapper-title black inner mb-0">
     <div class="container">
         <h1 class="article-level-1"><?php woocommerce_page_title(); ?></h1>
     </div>
 </div>
 <?php endif; ?>
+
+<div class="banner-shop">
+	<div class="banner-shop-img">
+		<img src="<?= getMedia('/images/banner-shop.png') ?>" alt="">
+	</div>
+</div>
 
 <div class="ppage-head mb-2">
 	<div class="container">
