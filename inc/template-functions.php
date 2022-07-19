@@ -70,3 +70,9 @@ require get_template_directory() . '/inc/func/login.php';
  * Filter
  */
 require get_template_directory() . '/inc/func/filter.php';
+
+/**
+ * Lang
+ */
+
+require get_template_directory() . '/inc/func/lang.php';

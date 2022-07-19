@@ -50,7 +50,7 @@
                         </span>
 
                         <span class="footer-contacts">
-                            Contact us: 
+                            <?= pll__( 'Contact us', 'scissor' ) ?>: 
                             <?php if( have_rows('contacts', 'options') ): ?>
                                 <?php while( have_rows('contacts', 'options') ): the_row(); ?>
                                     <?php if ( get_sub_field('title') == 'Email' ): ?>

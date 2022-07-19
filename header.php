@@ -89,32 +89,34 @@ global $woocommerce;
                                     <button class="btn btn-search" id="btnSearchHeader" data-expended="false"><i class="fa-solid fa-magnifying-glass"></i></button>
                                 </form>
                             </li>
-                            <!-- <li>
+                            <li>
                                 <div class="dropdown dropdown-lang">
                                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="currLang" data-bs-toggle="dropdown" aria-expanded="false">
 
                                     </a>
 
                                     <ul class="dropdown-menu" aria-labelledby="currLang">
-
+                                        <?php if ( function_exists('pll_the_languages') ) : ?>
+                                            <?php pll_the_languages( array( 'show_flags' => 0, 'show_names' => 1 ) ) ?>
+                                        <?php endif; ?>
                                     </ul>
                                 </div>
-                            </li> -->
+                            </li>
                             <li>
                                 <?php if ( is_user_logged_in() == true ) : ?>
-                                <a href="/my-account"><i class="fa-regular fa-user me-1"></i> <?php esc_html_e('Аккаунт', 'scissor'); ?></a>
+                                <a href="/my-account"><i class="fa-regular fa-user me-1"></i> <?= pll__('Account', 'scissor'); ?></a>
                                 <?php else : ?>
                                     <?php if ( is_page('login') && is_page('register') ) : ?>
-                                    <a href="/login"><i class="fa-regular fa-user me-1"></i> <?php esc_html_e('Аккаунт', 'scissor'); ?></a>
+                                    <a href="/login"><i class="fa-regular fa-user me-1"></i> <?= pll__('Account', 'scissor'); ?></a>
                                     <?php else: ?>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">
                                         <i class="fa-regular fa-user me-1"></i>
-                                        <?php esc_html_e('Аккаунт', 'scissor'); ?>
+                                        <?= pll__('Account', 'scissor'); ?>
                                     </a>
                                     <?php endif; ?>
                                 <?php endif; ?>
                             </li>
-                            <li><a href="<?= wc_get_cart_url() ?>">Корзина (<?= WC()->cart->get_cart_contents_count(); ?>)</a></li>
+                            <li><a href="<?= wc_get_cart_url() ?>"><?= pll__( 'Cart', 'scissor' ) ?> (<?= WC()->cart->get_cart_contents_count(); ?>)</a></li>
                         </ul>
                     </div>
                 </div>
