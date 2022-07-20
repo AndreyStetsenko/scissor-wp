@@ -1,0 +1,8 @@
+.page-archive {
+    &-subhead {
+        @include media("<md") {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

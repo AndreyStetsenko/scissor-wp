@@ -9,7 +9,7 @@ function ajax_filter_opt() {
 
     // echo json_encode( get_term_by('id', $_POST['catID'], 'product_cat', 'ARRAY_A')['slug'] );
 
-    $cat_slug = get_term_by('id', $_POST['catID'], 'product_cat', 'ARRAY_A')['slug'];
+    $cat_slug = get_term_by('id', $_REQUEST['catID'], 'product_cat', 'ARRAY_A')['slug'];
 
     $args = array(
         'post_type'      => 'product',
@@ -51,7 +51,7 @@ function ajax_filter_opt() {
 
     wp_send_json( $results );
 
-    wp_reset_query();
+    // wp_reset_query();
 
     // ===
 

@@ -68,80 +68,83 @@ get_header( 'shop' );
 
 <?php if ( woocommerce_product_loop() ) : ?>
 
-<div class="container">
-	<?php
-	/**
-		 * Hook: woocommerce_before_shop_loop.
-		 *
-		 * @hooked woocommerce_output_all_notices - 10
-		 * @hooked woocommerce_result_count - 20
-		 * @hooked woocommerce_catalog_ordering - 30
-		 */
-		do_action( 'woocommerce_before_shop_loop' );
-	?>
-</div>
+<section class="page-archive-subhead">
+	<div class="container">
+		<div class="cont">
+			<?php
+			/**
+				 * Hook: woocommerce_before_shop_loop.
+				 *
+				 * @hooked woocommerce_output_all_notices - 10
+				 * @hooked woocommerce_result_count - 20
+				 * @hooked woocommerce_catalog_ordering - 30
+				 */
+				do_action( 'woocommerce_before_shop_loop' );
+			?>
+		</div>
+	</div>
+</section>
 
 <section class="products-list-min">
 
     <div class="wrapper">
         <div class="container">
-            <div class="row items">
+			<div class="row items">
 
-						<?php
+				<?php
 
-						$args = array(
-							'post_type' => 'product',
-							'post_status' => 'publish',
-							'posts_per_page' => 6,
-							'meta_key' => 'total_sales',
-							'orderby' => 'meta_value_num',
-							'paged' => $paged,
-						);
+				$args = array(
+					'post_type' => 'product',
+					'post_status' => 'publish',
+					'posts_per_page' => 6,
+					'meta_key' => 'total_sales',
+					'orderby' => 'meta_value_num',
+					'paged' => $paged,
+				);
 
-						$loop = new WP_Query( $args );
-						if ( $loop->have_posts() ): while ( $loop->have_posts() ): $loop->the_post();
+				$loop = new WP_Query( $args );
+				if ( $loop->have_posts() ): while ( $loop->have_posts() ): $loop->the_post();
 
-							global $product;
+					global $product;
 
-							$price = $product->get_price_html();
-							$sku = $product->get_sku();
-							$stock = $product->get_stock_quantity(); 
-							$title = $product->get_name(); 
-							$reviews = $product->get_review_count(); 
-							$rating_count = $product->get_rating_count();
-							$average = $product->get_average_rating();
-							$img = $product->get_image();
-							$link = $product->get_permalink();
-							?>
-							
-							<div class="col-md-4 product-first item">
-									<a href="<?= $link ?>" class="item-img">
-											<?= $img ?>
-									</a>
-									<div class="item-body">
-											<h4 class="item-title"><?= $title ?></h4>
-											<div class="item-reviews">
-												<div class="stars">
-														<?php echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
-												</div>
-													<span class="item-reviews-title"><?= $reviews ?> reviews</span>
-											</div>
-											<span class="item-price"><?= $price ?></span>
-											<div class="item-btn mt-2">
-													<a href="<?= $link ?>" class="btn btn-black">Добавить в коризну</a>
-											</div>
+					$price = $product->get_price_html();
+					$sku = $product->get_sku();
+					$stock = $product->get_stock_quantity(); 
+					$title = $product->get_name(); 
+					$reviews = $product->get_review_count(); 
+					$rating_count = $product->get_rating_count();
+					$average = $product->get_average_rating();
+					$img = $product->get_image();
+					$link = $product->get_permalink();
+					?>
+					
+					<div class="col-md-4 product-first item">
+							<a href="<?= $link ?>" class="item-img">
+									<?= $img ?>
+							</a>
+							<div class="item-body">
+									<h4 class="item-title"><?= $title ?></h4>
+									<div class="item-reviews">
+										<div class="stars">
+												<?php echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
+										</div>
+											<span class="item-reviews-title"><?= $reviews ?> reviews</span>
+									</div>
+									<span class="item-price"><?= $price ?></span>
+									<div class="item-btn mt-2">
+											<a href="<?= $link ?>" class="btn btn-black">Добавить в коризну</a>
 									</div>
 							</div>
+					</div>
 
-						<?php endwhile; endif; wp_reset_postdata();
-            ?>
+				<?php endwhile; endif; wp_reset_postdata();
+				?>
 
-            </div>
-        </div>
+			</div>
+		</div>
     </div>
 </section>
 
-<div class="container">
 <?php
 
 	/**
@@ -165,6 +168,6 @@ endif;
  * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
  */
 do_action( 'woocommerce_after_main_content' ); ?>
-</div>
+
 <?php
 get_footer( 'shop' );

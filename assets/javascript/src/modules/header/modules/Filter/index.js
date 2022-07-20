@@ -10,11 +10,11 @@ export default class Auth {
         this.ajaxurl = document.querySelector('input[name="ajax_url"]').value;
         this.nonce = document.querySelector('input[name="ajax_nonce"]').value;
         this.dropFilter = document.getElementById('dropFilter');
-        this.filterItem = this.dropFilter.querySelectorAll('.item');
+        this.filterItem = this.dropFilter?.querySelectorAll('.item');
         this.filterResult = document.getElementById('filterResult');
     }
     bindEvents() {
-        this.filterItem.forEach((item) => {
+        this.filterItem?.forEach((item) => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
 
@@ -31,7 +31,7 @@ export default class Auth {
             catID
         };
 
-        console.log(catID);
+        // console.log(formData);
 
         axios.post(this.ajaxurl, Qs.stringify(formData))
             .then(async(response) => {
@@ -49,7 +49,7 @@ export default class Auth {
                 ${el.img}
             </a>
             <div class="item-body">
-                <h4 class="item-title"><?php the_title(); ?></h4>
+                <h4 class="item-title">${el.title}</h4>
                 <div class="item-reviews">
                     <div class="stars">
                     ${el.stars}

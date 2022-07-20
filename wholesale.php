@@ -44,6 +44,55 @@ get_header();
 
         </div>
         <div class="row items wholesale-wrap mt-3" id="filterResult">
+
+        <?php
+
+				$args = array(
+					'post_type' => 'product',
+					'post_status' => 'publish',
+					'posts_per_page' => 6,
+					'meta_key' => 'total_sales',
+					'orderby' => 'meta_value_num',
+					'paged' => $paged,
+				);
+
+				$loop = new WP_Query( $args );
+				if ( $loop->have_posts() ): while ( $loop->have_posts() ): $loop->the_post();
+
+					global $product;
+
+					$price = $product->get_price_html();
+					$sku = $product->get_sku();
+					$stock = $product->get_stock_quantity(); 
+					$title = $product->get_name(); 
+					$reviews = $product->get_review_count(); 
+					$rating_count = $product->get_rating_count();
+					$average = $product->get_average_rating();
+					$img = $product->get_image();
+					$link = $product->get_permalink();
+					?>
+					
+					<div class="col-md-3 product-first item product-opt">
+							<a href="<?= $link ?>" class="item-img">
+									<?= $img ?>
+							</a>
+							<div class="item-body">
+									<h4 class="item-title"><?= $title ?></h4>
+									<div class="item-reviews">
+										<div class="stars">
+												<?php echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
+										</div>
+											<span class="item-reviews-title"><?= $reviews ?> reviews</span>
+									</div>
+									<span class="item-price"><?= $price ?></span>
+									<div class="item-btn mt-2">
+											<a href="<?= $link ?>" class="btn btn-black">Добавить в коризну</a>
+									</div>
+							</div>
+					</div>
+
+				<?php endwhile; endif; wp_reset_postdata();
+				?>
             
         </div>
     </div>
